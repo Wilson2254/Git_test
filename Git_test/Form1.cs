@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Data.Common;
 using System.Data.SQLite;
 using System.IO;
-using System.Data.Common;
+using System.Windows.Forms;
 
 namespace Git_test
 {
@@ -20,14 +13,14 @@ namespace Git_test
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bCreateBD_Click(object sender, EventArgs e)
         {
             string databaseName = @"БАЗА_ДАННЫХ.db";
             SQLiteConnection.CreateFile(databaseName);
             label1.Text=(File.Exists(databaseName) ? "База данных создана" : "Возникла ошибка при создании базы данных");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bCreateT_Click(object sender, EventArgs e)
         {
             const string databaseName = @"БАЗА_ДАННЫХ.db";
             SQLiteConnection connection =
@@ -39,7 +32,7 @@ namespace Git_test
             connection.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void bGetSP_Click(object sender, EventArgs e)
         {
             const string databaseName = @"BD.db";
             SQLiteConnection connection =

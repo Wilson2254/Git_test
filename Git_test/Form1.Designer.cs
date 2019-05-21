@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.bCreateBD = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bCreateT = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bGetSP = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // bCreateBD
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "СОЗДАТЬ БД";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bCreateBD.BackColor = System.Drawing.Color.White;
+            this.bCreateBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bCreateBD.Location = new System.Drawing.Point(12, 12);
+            this.bCreateBD.Name = "bCreateBD";
+            this.bCreateBD.Size = new System.Drawing.Size(109, 23);
+            this.bCreateBD.TabIndex = 0;
+            this.bCreateBD.Text = "СОЗДАТЬ БД";
+            this.bCreateBD.UseVisualStyleBackColor = false;
+            this.bCreateBD.Click += new System.EventHandler(this.bCreateBD_Click);
             // 
             // label1
             // 
@@ -58,17 +58,17 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
-            // button2
+            // bCreateT
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 39);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "СОЗДАТЬ ТАБЛИЦУ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bCreateT.BackColor = System.Drawing.Color.White;
+            this.bCreateT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bCreateT.Location = new System.Drawing.Point(12, 68);
+            this.bCreateT.Name = "bCreateT";
+            this.bCreateT.Size = new System.Drawing.Size(109, 39);
+            this.bCreateT.TabIndex = 3;
+            this.bCreateT.Text = "СОЗДАТЬ ТАБЛИЦУ";
+            this.bCreateT.UseVisualStyleBackColor = false;
+            this.bCreateT.Click += new System.EventHandler(this.bCreateT_Click);
             // 
             // label2
             // 
@@ -79,17 +79,17 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "label2";
             // 
-            // button3
+            // bGetSP
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(12, 136);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 39);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "ПОЛУЧЕНИЕ СПИСКА ТАБЛИЦЫ БД";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.bGetSP.BackColor = System.Drawing.Color.White;
+            this.bGetSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGetSP.Location = new System.Drawing.Point(12, 136);
+            this.bGetSP.Name = "bGetSP";
+            this.bGetSP.Size = new System.Drawing.Size(109, 39);
+            this.bGetSP.TabIndex = 6;
+            this.bGetSP.Text = "ПОЛУЧЕНИЕ СПИСКА ТАБЛИЦЫ БД";
+            this.bGetSP.UseVisualStyleBackColor = false;
+            this.bGetSP.Click += new System.EventHandler(this.bGetSP_Click);
             // 
             // label3
             // 
@@ -116,11 +116,11 @@
             this.ClientSize = new System.Drawing.Size(897, 527);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.bGetSP);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bCreateT);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bCreateBD);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -130,11 +130,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bCreateBD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bCreateT;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bGetSP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
