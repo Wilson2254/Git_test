@@ -66,7 +66,7 @@
             this.bCreateT.Name = "bCreateT";
             this.bCreateT.Size = new System.Drawing.Size(109, 39);
             this.bCreateT.TabIndex = 3;
-            this.bCreateT.Text = "СОЗДАТЬ ТАБЛИЦУ";
+            this.bCreateT.Text = "СОЗДАТЬ ТАБЛИЦЫ";
             this.bCreateT.UseVisualStyleBackColor = false;
             this.bCreateT.Click += new System.EventHandler(this.bCreateT_Click);
             // 
@@ -96,9 +96,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(127, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
+            this.label3.Text = "Таблицы: ";
             // 
             // label4
             // 
