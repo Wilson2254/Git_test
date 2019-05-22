@@ -11,7 +11,7 @@ namespace Git_test
         const string databaseName = @"BD.db";
         SQLiteConnection connection;
         SQLiteCommand command;
-
+        Random rnd = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +19,6 @@ namespace Git_test
             new SQLiteConnection(string.Format("Data Source={0};", databaseName));
         }
        
-
         private void bCreateBD_Click(object sender, EventArgs e)
         {
 
@@ -34,12 +33,12 @@ namespace Git_test
 
             //СОЗДАНИЕ ТАБЛ УЛИЦЫ
             command =
-            new SQLiteCommand("CREATE TABLE streets (id INTEGER PRIMARY KEY, name_street TEXT);", connection); //НОМЕР  УЛИЦЫ, ИМЯ УЛИЦЫ (name+id: 1 name1, 2 name2)
+            new SQLiteCommand("CREATE TABLE streets (id INTEGER PRIMARY KEY , name_street TEXT);", connection); //НОМЕР  УЛИЦЫ, ИМЯ УЛИЦЫ (name+id: 1 name1, 2 name2)
             command.ExecuteNonQuery();
 
             //СОЗДАНИЕ ТАБЛ ДОМА
             command =
-            new SQLiteCommand("CREATE TABLE houses (id INTEGER PRIMARY KEY, name_street TEXT, count_floor INTEGER, count_entrance INTEGER, count_flat INTEGER,  FOREIGN KEY(name_street) REFERENCES streets(name_street));", connection); //НОМЕР ДОМА, Имя улицы, КОЛ ЭТАЖЕЙ, КОЛ ПОДЪЕЗДОВ, КОЛ КВАРТИР
+            new SQLiteCommand("CREATE TABLE houses (id INTEGER PRIMARY KEY , name_street TEXT, count_floor INTEGER, count_entrance INTEGER, count_flat INTEGER,  FOREIGN KEY(name_street) REFERENCES streets(name_street));", connection); //НОМЕР ДОМА, Имя улицы, КОЛ ЭТАЖЕЙ, КОЛ ПОДЪЕЗДОВ, КОЛ КВАРТИР
             command.ExecuteNonQuery();
 
             connection.Close();
@@ -47,7 +46,8 @@ namespace Git_test
 
         private void bGetSP_Click(object sender, EventArgs e)
         {
-           
+            label3.Text = "";
+
             connection.Open();
             command = new SQLiteCommand("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;", connection);
             SQLiteDataReader reader = command.ExecuteReader();
@@ -57,6 +57,49 @@ namespace Git_test
             label4.Text = "Готово";
         }
 
-   
+        private void bZapolnenie_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            int streets = Convert.ToInt32(tStreets.Text);
+            int houses = Convert.ToInt32(tHouses.Text);
+            string name;
+            for (int i = 1; i <= streets; i++)//заполнение улиц
+            {
+                name = "name" + i;
+                command =
+            new SQLiteCommand("INSERT INTO 'streets' (name_street) VALUES ('name');", connection);
+                command.ExecuteNonQuery();
+            }
+            
+            
+            int floor, entrance, flat;
+            int randstreet;
+            for (int i = 1; i <= houses; i++)
+            {
+                floor = rnd.Next(1,20);
+                entrance = rnd.Next(1, 6);
+                flat = rnd.Next(10, 500);
+                randstreet = rnd.Next(1, streets + 1);
+                name = "name" + i;
+                command =
+            new SQLiteCommand("INSERT INTO 'houses' (name_street, count_floor, count_entrance, count_flat) VALUES ('name', 'floor', 'entrance', 'flat');", connection);
+                command.ExecuteNonQuery();
+            }
+            
+            connection.Close();
+        }
+
+        private void bDeleteT_Click(object sender, EventArgs e) //удаление всех таблиц
+        {
+            connection.Open();
+            command =
+            new SQLiteCommand("DROP TABLE IF EXISTS 'houses';", connection);
+            command.ExecuteNonQuery();
+            
+            command =
+            new SQLiteCommand("DROP TABLE IF EXISTS 'streets';", connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
     }
 }

@@ -35,13 +35,18 @@
             this.bGetSP = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tStreets = new System.Windows.Forms.TextBox();
+            this.tHouses = new System.Windows.Forms.TextBox();
+            this.bZapolnenie = new System.Windows.Forms.Button();
+            this.bDeleteT = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bCreateBD
             // 
             this.bCreateBD.BackColor = System.Drawing.Color.White;
             this.bCreateBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bCreateBD.Location = new System.Drawing.Point(12, 12);
+            this.bCreateBD.Location = new System.Drawing.Point(54, 39);
             this.bCreateBD.Name = "bCreateBD";
             this.bCreateBD.Size = new System.Drawing.Size(109, 23);
             this.bCreateBD.TabIndex = 0;
@@ -52,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 21);
+            this.label1.Location = new System.Drawing.Point(170, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
@@ -62,7 +67,7 @@
             // 
             this.bCreateT.BackColor = System.Drawing.Color.White;
             this.bCreateT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bCreateT.Location = new System.Drawing.Point(12, 68);
+            this.bCreateT.Location = new System.Drawing.Point(54, 95);
             this.bCreateT.Name = "bCreateT";
             this.bCreateT.Size = new System.Drawing.Size(109, 39);
             this.bCreateT.TabIndex = 3;
@@ -73,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 78);
+            this.label2.Location = new System.Drawing.Point(170, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 5;
@@ -83,7 +88,7 @@
             // 
             this.bGetSP.BackColor = System.Drawing.Color.White;
             this.bGetSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bGetSP.Location = new System.Drawing.Point(12, 136);
+            this.bGetSP.Location = new System.Drawing.Point(54, 163);
             this.bGetSP.Name = "bGetSP";
             this.bGetSP.Size = new System.Drawing.Size(109, 39);
             this.bGetSP.TabIndex = 6;
@@ -94,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(127, 136);
+            this.label3.Location = new System.Drawing.Point(169, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 7;
@@ -103,17 +108,68 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(128, 162);
+            this.label4.Location = new System.Drawing.Point(170, 189);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(275, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(248, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Введите колличество улиц и домов: ";
+            // 
+            // tStreets
+            // 
+            this.tStreets.Location = new System.Drawing.Point(562, 39);
+            this.tStreets.Name = "tStreets";
+            this.tStreets.Size = new System.Drawing.Size(129, 20);
+            this.tStreets.TabIndex = 10;
+            // 
+            // tHouses
+            // 
+            this.tHouses.Location = new System.Drawing.Point(562, 75);
+            this.tHouses.Name = "tHouses";
+            this.tHouses.Size = new System.Drawing.Size(129, 20);
+            this.tHouses.TabIndex = 11;
+            // 
+            // bZapolnenie
+            // 
+            this.bZapolnenie.Location = new System.Drawing.Point(562, 111);
+            this.bZapolnenie.Name = "bZapolnenie";
+            this.bZapolnenie.Size = new System.Drawing.Size(129, 23);
+            this.bZapolnenie.TabIndex = 12;
+            this.bZapolnenie.Text = "Заполнить БД";
+            this.bZapolnenie.UseVisualStyleBackColor = true;
+            this.bZapolnenie.Click += new System.EventHandler(this.bZapolnenie_Click);
+            // 
+            // bDeleteT
+            // 
+            this.bDeleteT.BackColor = System.Drawing.Color.White;
+            this.bDeleteT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bDeleteT.Location = new System.Drawing.Point(54, 230);
+            this.bDeleteT.Name = "bDeleteT";
+            this.bDeleteT.Size = new System.Drawing.Size(109, 39);
+            this.bDeleteT.TabIndex = 14;
+            this.bDeleteT.Text = "УДАЛИТЬ ТАБЛИЦЫ";
+            this.bDeleteT.UseVisualStyleBackColor = false;
+            this.bDeleteT.Click += new System.EventHandler(this.bDeleteT_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 527);
+            this.Controls.Add(this.bDeleteT);
+            this.Controls.Add(this.bZapolnenie);
+            this.Controls.Add(this.tHouses);
+            this.Controls.Add(this.tStreets);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bGetSP);
@@ -137,6 +193,11 @@
         private System.Windows.Forms.Button bGetSP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tStreets;
+        private System.Windows.Forms.TextBox tHouses;
+        private System.Windows.Forms.Button bZapolnenie;
+        private System.Windows.Forms.Button bDeleteT;
     }
 }
 
