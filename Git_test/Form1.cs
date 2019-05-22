@@ -42,19 +42,18 @@ namespace Git_test
             command.ExecuteNonQuery();
 
             connection.Close();
+            label2.Text = "Таблицы созданы";
         }
 
         private void bGetSP_Click(object sender, EventArgs e)
         {
-            label3.Text = "";
-
+            label4.Text = "";
             connection.Open();
             command = new SQLiteCommand("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;", connection);
             SQLiteDataReader reader = command.ExecuteReader();
             foreach (DbDataRecord record in reader)              
-            label3.Text +=record["name"]+ " ";
+            label4.Text +="' " + record["name"]+ " '" + " ";
             connection.Close();
-            label4.Text = "Готово";
         }
 
         private void bZapolnenie_Click(object sender, EventArgs e)
@@ -100,6 +99,7 @@ namespace Git_test
             new SQLiteCommand("DROP TABLE IF EXISTS 'streets';", connection);
             command.ExecuteNonQuery();
             connection.Close();
+            label6.Text = "Таблицы удалены";
         }
 
         private void bZapros_Click(object sender, EventArgs e)
