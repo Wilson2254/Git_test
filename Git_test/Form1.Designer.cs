@@ -40,6 +40,7 @@
             this.tHouses = new System.Windows.Forms.TextBox();
             this.bZapolnenie = new System.Windows.Forms.Button();
             this.bDeleteT = new System.Windows.Forms.Button();
+            this.bZapros = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bCreateBD
@@ -120,9 +121,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(275, 39);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(248, 16);
+            this.label5.Size = new System.Drawing.Size(240, 16);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Введите колличество улиц и домов: ";
+            this.label5.Text = "Введите количество улиц и домов: ";
             // 
             // tStreets
             // 
@@ -140,12 +141,14 @@
             // 
             // bZapolnenie
             // 
+            this.bZapolnenie.BackColor = System.Drawing.Color.White;
+            this.bZapolnenie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bZapolnenie.Location = new System.Drawing.Point(562, 111);
             this.bZapolnenie.Name = "bZapolnenie";
             this.bZapolnenie.Size = new System.Drawing.Size(129, 23);
             this.bZapolnenie.TabIndex = 12;
             this.bZapolnenie.Text = "Заполнить БД";
-            this.bZapolnenie.UseVisualStyleBackColor = true;
+            this.bZapolnenie.UseVisualStyleBackColor = false;
             this.bZapolnenie.Click += new System.EventHandler(this.bZapolnenie_Click);
             // 
             // bDeleteT
@@ -160,11 +163,24 @@
             this.bDeleteT.UseVisualStyleBackColor = false;
             this.bDeleteT.Click += new System.EventHandler(this.bDeleteT_Click);
             // 
+            // bZapros
+            // 
+            this.bZapros.BackColor = System.Drawing.Color.White;
+            this.bZapros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bZapros.Location = new System.Drawing.Point(562, 230);
+            this.bZapros.Name = "bZapros";
+            this.bZapros.Size = new System.Drawing.Size(129, 23);
+            this.bZapros.TabIndex = 15;
+            this.bZapros.Text = "Выполнить запрос";
+            this.bZapros.UseVisualStyleBackColor = false;
+            this.bZapros.Click += new System.EventHandler(this.bZapros_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 527);
+            this.Controls.Add(this.bZapros);
             this.Controls.Add(this.bDeleteT);
             this.Controls.Add(this.bZapolnenie);
             this.Controls.Add(this.tHouses);
@@ -198,6 +214,7 @@
         private System.Windows.Forms.TextBox tHouses;
         private System.Windows.Forms.Button bZapolnenie;
         private System.Windows.Forms.Button bDeleteT;
+        private System.Windows.Forms.Button bZapros;
     }
 }
 

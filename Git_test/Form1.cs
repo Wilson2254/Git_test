@@ -101,5 +101,17 @@ namespace Git_test
             command.ExecuteNonQuery();
             connection.Close();
         }
+
+        private void bZapros_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            int rand_id_str = rnd.Next(1, Convert.ToInt32(tStreets.Text)+1);
+            string namestr = "name" + rand_id_str;
+            command =
+            new SQLiteCommand("SELECT houses.* FROM streets, houses where houses.name_street = streets.name_street AND streets.name_street='namestr';", connection);
+            command.ExecuteNonQuery();
+
+            connection.Close();
+        }
     }
 }
