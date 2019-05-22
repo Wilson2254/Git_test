@@ -45,11 +45,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bCreateBD
             // 
-            this.bCreateBD.BackColor = System.Drawing.Color.White;
+            this.bCreateBD.BackColor = System.Drawing.Color.MistyRose;
             this.bCreateBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCreateBD.Location = new System.Drawing.Point(12, 12);
             this.bCreateBD.Name = "bCreateBD";
@@ -62,6 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(127, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
@@ -70,7 +73,7 @@
             // 
             // bCreateT
             // 
-            this.bCreateT.BackColor = System.Drawing.Color.White;
+            this.bCreateT.BackColor = System.Drawing.Color.MistyRose;
             this.bCreateT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCreateT.Location = new System.Drawing.Point(12, 57);
             this.bCreateT.Name = "bCreateT";
@@ -83,6 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(127, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
@@ -91,7 +95,7 @@
             // 
             // bGetSP
             // 
-            this.bGetSP.BackColor = System.Drawing.Color.White;
+            this.bGetSP.BackColor = System.Drawing.Color.MistyRose;
             this.bGetSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bGetSP.Location = new System.Drawing.Point(12, 102);
             this.bGetSP.Name = "bGetSP";
@@ -104,6 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(127, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
@@ -113,39 +118,44 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(181, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Инфо";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(318, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 32);
+            this.label5.Size = new System.Drawing.Size(148, 26);
             this.label5.TabIndex = 9;
             this.label5.Text = "Введите количество улиц и \r\nдомов: ";
             // 
             // tStreets
             // 
+            this.tStreets.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tStreets.Location = new System.Drawing.Point(321, 47);
             this.tStreets.Name = "tStreets";
             this.tStreets.Size = new System.Drawing.Size(109, 20);
             this.tStreets.TabIndex = 10;
+            this.tStreets.Text = "5";
             // 
             // tHouses
             // 
+            this.tHouses.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tHouses.Location = new System.Drawing.Point(321, 73);
             this.tHouses.Name = "tHouses";
             this.tHouses.Size = new System.Drawing.Size(109, 20);
             this.tHouses.TabIndex = 11;
+            this.tHouses.Text = "10";
             // 
             // bZapolnenie
             // 
-            this.bZapolnenie.BackColor = System.Drawing.Color.White;
+            this.bZapolnenie.BackColor = System.Drawing.Color.MistyRose;
             this.bZapolnenie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bZapolnenie.Location = new System.Drawing.Point(321, 102);
             this.bZapolnenie.Name = "bZapolnenie";
@@ -157,7 +167,7 @@
             // 
             // bDeleteT
             // 
-            this.bDeleteT.BackColor = System.Drawing.Color.White;
+            this.bDeleteT.BackColor = System.Drawing.Color.MistyRose;
             this.bDeleteT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bDeleteT.Location = new System.Drawing.Point(12, 147);
             this.bDeleteT.Name = "bDeleteT";
@@ -169,7 +179,7 @@
             // 
             // bZapros
             // 
-            this.bZapros.BackColor = System.Drawing.Color.White;
+            this.bZapros.BackColor = System.Drawing.Color.MistyRose;
             this.bZapros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bZapros.Location = new System.Drawing.Point(321, 147);
             this.bZapros.Name = "bZapros";
@@ -182,6 +192,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(127, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
@@ -191,6 +202,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(436, 50);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 13);
@@ -200,6 +212,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(436, 76);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 13);
@@ -208,16 +221,38 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 228);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(496, 160);
             this.listBox1.TabIndex = 16;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(436, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Инфо";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(436, 160);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Инфо";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(520, 393);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bZapros);
@@ -230,6 +265,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bGetSP);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
@@ -262,6 +299,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 

@@ -83,6 +83,7 @@ namespace Git_test
                 command =
             new SQLiteCommand("INSERT INTO 'houses' (name_street, count_floor, count_entrance, count_flat) VALUES ('name', 'floor', 'entrance', 'flat');", connection);
                 command.ExecuteNonQuery();
+                label9.Text = "Готово";
             }
             
             connection.Close();
@@ -112,6 +113,7 @@ namespace Git_test
             command.ExecuteNonQuery();
 
             connection.Close();
+            label10.Text = "Готово";
         }
     }
 }
