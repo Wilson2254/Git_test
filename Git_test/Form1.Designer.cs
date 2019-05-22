@@ -155,7 +155,7 @@
             // 
             this.bDeleteT.BackColor = System.Drawing.Color.White;
             this.bDeleteT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bDeleteT.Location = new System.Drawing.Point(54, 368);
+            this.bDeleteT.Location = new System.Drawing.Point(54, 230);
             this.bDeleteT.Name = "bDeleteT";
             this.bDeleteT.Size = new System.Drawing.Size(109, 39);
             this.bDeleteT.TabIndex = 14;
