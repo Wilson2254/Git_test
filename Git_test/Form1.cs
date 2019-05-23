@@ -3,6 +3,7 @@ using System.Data.Common;
 using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace Git_test
 {
@@ -59,38 +60,46 @@ namespace Git_test
 
         private void bZapolnenie_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
-            connection.Open();
-            int streets = Convert.ToInt32(tStreets.Text);
-            int houses = Convert.ToInt32(tHouses.Text);
-            string name;
-            for (int i = 1; i <= streets; i++)//заполнение улиц
+            //timer1.Enabled = true;
+            int streets = Convert.ToInt32(tStreets.Text); //заданное колво улиц
+            int houses = Convert.ToInt32(tHouses.Text);  // заданное колво домов
+
+            List <string> name = new List<string>();
+            for (int i = 1; i <= streets; i++)
             {
-                name = "name" + i;
+                name.Add("name" + i);
+            }
+            List<int> floor = new List<int>();
+            List<int> entrance = new List<int>();
+            List<int> flat = new List<int>();
+            List<string> randstreet = new List<string>();
+            for (int i = 0; i < houses; i++)
+            {
+                floor.Add(rnd.Next(1, 20));
+                entrance.Add(rnd.Next(1, 6));
+                flat.Add(rnd.Next(10, 500));
+                randstreet.Add("name"+rnd.Next(1, streets + 1));
+            }//создание и заполнение списков значениями для вставки в таблицы
+
+            connection.Open();
+            for (int i = 0; i < streets; i++)//заполнение улиц
+            {
                 command =
-            new SQLiteCommand("INSERT INTO 'streets' (name_street) VALUES ('name');", connection);
+            new SQLiteCommand("INSERT INTO 'streets' (name_street) VALUES ('name[i]');", connection);
                 command.ExecuteNonQuery();
-                timer1.Enabled = false;
-                label11.Text = a.ToString();
+                //timer1.Enabled = false;
+                //label11.Text = a.ToString();
             }
             
-            
-            int floor, entrance, flat;
-            int randstreet;
-            for (int i = 1; i <= houses; i++)
+            for (int i = 0; i < houses; i++)//заполнение домов
             {
-                floor = rnd.Next(1,20);
-                entrance = rnd.Next(1, 6);
-                flat = rnd.Next(10, 500);
-                randstreet = rnd.Next(1, streets + 1);
-                name = "name" + i;
                 command =
-            new SQLiteCommand("INSERT INTO 'houses' (name_street, count_floor, count_entrance, count_flat) VALUES ('name', 'floor', 'entrance', 'flat');", connection);
+            new SQLiteCommand("INSERT INTO 'houses' (name_street, count_floor, count_entrance, count_flat) VALUES ('randstreet[i]', 'floor[i]', 'entrance[i]', 'flat[i]');", connection);
                 command.ExecuteNonQuery();
-                label9.Text = "Готово";
             }
             
             connection.Close();
+            label9.Text = "Готово";
         }
 
         private void bDeleteT_Click(object sender, EventArgs e) //удаление всех таблиц
