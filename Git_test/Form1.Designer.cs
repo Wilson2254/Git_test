@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.bCreateBD = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.bCreateT = new System.Windows.Forms.Button();
@@ -47,6 +48,8 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bCreateBD
@@ -248,12 +251,27 @@
             this.label10.TabIndex = 5;
             this.label10.Text = "Инфо";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(218, 196);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Таймер";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(520, 393);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bZapros);
             this.Controls.Add(this.bDeleteT);
@@ -275,6 +293,7 @@
             this.Controls.Add(this.bCreateBD);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,6 +320,8 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label11;
     }
 }
 

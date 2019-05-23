@@ -12,6 +12,7 @@ namespace Git_test
         SQLiteConnection connection;
         SQLiteCommand command;
         Random rnd = new Random();
+        int a = 0;
         public Form1()
         {
             InitializeComponent();
@@ -58,6 +59,7 @@ namespace Git_test
 
         private void bZapolnenie_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = true;
             connection.Open();
             int streets = Convert.ToInt32(tStreets.Text);
             int houses = Convert.ToInt32(tHouses.Text);
@@ -68,6 +70,8 @@ namespace Git_test
                 command =
             new SQLiteCommand("INSERT INTO 'streets' (name_street) VALUES ('name');", connection);
                 command.ExecuteNonQuery();
+                timer1.Enabled = false;
+                label11.Text = a.ToString();
             }
             
             
@@ -109,11 +113,21 @@ namespace Git_test
             int rand_id_str = rnd.Next(1, Convert.ToInt32(tStreets.Text)+1);
             string namestr = "name" + rand_id_str;
             command =
-            new SQLiteCommand("SELECT houses.* FROM streets, houses where houses.name_street = streets.name_street AND streets.name_street='namestr';", connection);
+            new SQLiteCommand("SELECT houses.* FROM streets, houses where houses.name_street = streets.name_street AND streets.name_street='namestr';", connection); //Выводим всю информацию о домах, которые находятся на определнной улице
             command.ExecuteNonQuery();
-
             connection.Close();
             label10.Text = "Готово";
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            a++;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
