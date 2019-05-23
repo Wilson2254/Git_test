@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.bCreateBD = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.bCreateT = new System.Windows.Forms.Button();
@@ -48,9 +47,8 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bGeneration = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -229,7 +227,7 @@
             // 
             this.listBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(29, 240);
+            this.listBox1.Location = new System.Drawing.Point(29, 268);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(464, 160);
             this.listBox1.TabIndex = 16;
@@ -254,11 +252,6 @@
             this.label10.TabIndex = 5;
             this.label10.Text = "Инфо";
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -268,16 +261,17 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Таймер";
             // 
-            // button1
+            // bGeneration
             // 
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(324, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 39);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Генерация новых значений";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bGeneration.BackColor = System.Drawing.Color.MistyRose;
+            this.bGeneration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bGeneration.Location = new System.Drawing.Point(324, 102);
+            this.bGeneration.Name = "bGeneration";
+            this.bGeneration.Size = new System.Drawing.Size(109, 39);
+            this.bGeneration.TabIndex = 18;
+            this.bGeneration.Text = "Генерация значений";
+            this.bGeneration.UseVisualStyleBackColor = false;
+            this.bGeneration.Click += new System.EventHandler(this.bGeneration_Click);
             // 
             // label12
             // 
@@ -304,10 +298,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(530, 432);
+            this.ClientSize = new System.Drawing.Size(530, 529);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bGeneration);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bZapros);
@@ -357,9 +351,8 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bGeneration;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
     }
