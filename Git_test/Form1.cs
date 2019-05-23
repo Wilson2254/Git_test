@@ -60,7 +60,7 @@ namespace Git_test
 
         private void bZapolnenie_Click(object sender, EventArgs e)
         {
-            //timer1.Enabled = true;
+            
             int streets = Convert.ToInt32(tStreets.Text); //заданное колво улиц
             int houses = Convert.ToInt32(tHouses.Text);  // заданное колво домов
 
@@ -80,7 +80,7 @@ namespace Git_test
                 flat.Add(rnd.Next(10, 500));
                 randstreet.Add("name"+rnd.Next(1, streets + 1));
             }//создание и заполнение списков значениями для вставки в таблицы
-            
+            DateTime dt = DateTime.Now;
             connection.Open();
             for (int i = 0; i < streets; i++)//заполнение улиц
             {
@@ -100,6 +100,8 @@ namespace Git_test
             
             connection.Close();
             label9.Text = "Готово";
+            TimeSpan sp = DateTime.Now - dt;
+            label11.Text = sp.ToString();
         }
 
         private void bDeleteT_Click(object sender, EventArgs e) //удаление всех таблиц
@@ -118,6 +120,7 @@ namespace Git_test
 
         private void bZapros_Click(object sender, EventArgs e)
         {
+            DateTime dt = DateTime.Now;
             connection.Open();
             int rand_id_str = rnd.Next(1, Convert.ToInt32(tStreets.Text)+1);
             string namestr = "name" + rand_id_str;
@@ -126,7 +129,8 @@ namespace Git_test
             command.ExecuteNonQuery();
             connection.Close();
             label10.Text = "Готово";
-
+            TimeSpan sp = DateTime.Now - dt;
+            label11.Text = sp.ToString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
