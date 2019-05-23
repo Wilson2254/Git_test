@@ -80,7 +80,7 @@ namespace Git_test
                 flat.Add(rnd.Next(10, 500));
                 randstreet.Add("name"+rnd.Next(1, streets + 1));
             }//создание и заполнение списков значениями для вставки в таблицы
-
+            
             connection.Open();
             for (int i = 0; i < streets; i++)//заполнение улиц
             {
