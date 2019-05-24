@@ -51,6 +51,7 @@
             this.bGeneration = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.bUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bCreateBD
@@ -185,7 +186,7 @@
             // 
             this.bZapros.BackColor = System.Drawing.Color.MistyRose;
             this.bZapros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bZapros.Location = new System.Drawing.Point(324, 192);
+            this.bZapros.Location = new System.Drawing.Point(324, 256);
             this.bZapros.Name = "bZapros";
             this.bZapros.Size = new System.Drawing.Size(109, 39);
             this.bZapros.TabIndex = 15;
@@ -227,7 +228,7 @@
             // 
             this.listBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(29, 268);
+            this.listBox1.Location = new System.Drawing.Point(29, 344);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(464, 160);
             this.listBox1.TabIndex = 16;
@@ -246,7 +247,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(439, 205);
+            this.label10.Location = new System.Drawing.Point(434, 282);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 5;
@@ -293,12 +294,25 @@
             this.label13.TabIndex = 20;
             this.label13.Text = "Инфо";
             // 
+            // bUpdate
+            // 
+            this.bUpdate.BackColor = System.Drawing.Color.MistyRose;
+            this.bUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bUpdate.Location = new System.Drawing.Point(324, 198);
+            this.bUpdate.Name = "bUpdate";
+            this.bUpdate.Size = new System.Drawing.Size(109, 39);
+            this.bUpdate.TabIndex = 21;
+            this.bUpdate.Text = "Обновление БД";
+            this.bUpdate.UseVisualStyleBackColor = false;
+            this.bUpdate.Click += new System.EventHandler(this.bUpdate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(530, 529);
+            this.Controls.Add(this.bUpdate);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.bGeneration);
@@ -324,7 +338,6 @@
             this.Controls.Add(this.bCreateBD);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,6 +368,7 @@
         private System.Windows.Forms.Button bGeneration;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button bUpdate;
     }
 }
 

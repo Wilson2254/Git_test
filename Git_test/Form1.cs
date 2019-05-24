@@ -66,9 +66,6 @@ namespace Git_test
 
         private void bZapolnenie_Click(object sender, EventArgs e)
         {
-            
-            streets = Convert.ToInt32(tStreets.Text); //заданное колво улиц
-            houses = Convert.ToInt32(tHouses.Text);  // заданное колво домов
             DateTime dt = DateTime.Now;
             connection.Open();
             for (int i = 0; i < streets; i++)//заполнение улиц
@@ -139,22 +136,20 @@ namespace Git_test
             label11.Text = sp.ToString();
         }
 
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void bGeneration_Click(object sender, EventArgs e)
+        {
+            streets = Convert.ToInt32(tStreets.Text); //заданное колво улиц
+            houses = Convert.ToInt32(tHouses.Text);  // заданное колво домов
+            Generate();
+        }
+        public void Generate()//создание и заполнение списков значениями для вставки в таблицы
         {
             name.Clear();
             floor.Clear();
             entrance.Clear();
             flat.Clear();
             randstreet.Clear();
-            streets = Convert.ToInt32(tStreets.Text); //заданное колво улиц
-            houses = Convert.ToInt32(tHouses.Text);  // заданное колво домов
             for (int i = 1; i <= streets; i++)
             {
                 name.Add("name" + i);
@@ -165,7 +160,12 @@ namespace Git_test
                 entrance.Add(rnd.Next(1, 6));
                 flat.Add(rnd.Next(10, 500));
                 randstreet.Add("name" + rnd.Next(1, streets + 1));
-            }//создание и заполнение списков значениями для вставки в таблицы
+            }
+        }
+
+        private void bUpdate_Click(object sender, EventArgs e)
+        {
+            Generate();
         }
     }
 }
