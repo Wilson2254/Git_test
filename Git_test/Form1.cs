@@ -66,6 +66,7 @@ namespace Git_test
 
         private void bZapolnenie_Click(object sender, EventArgs e)
         {
+            l_InfoZapoln.Text = "";
             DateTime dt = DateTime.Now;
             connection.Open();
             for (int i = 0; i < streets; i++)//заполнение улиц
@@ -85,13 +86,14 @@ namespace Git_test
                 command.ExecuteNonQuery();
             }
             connection.Close();
-            label9.Text = "Готово";
+            l_InfoZapoln.Text = "Готово";
             TimeSpan sp = DateTime.Now - dt;
-            label11.Text = sp.ToString();
+            lZapoln.Text = sp.ToString();
         }
 
         private void bDeleteT_Click(object sender, EventArgs e) //удаление всех таблиц
         {
+            label6.Text = "";
             connection.Open();
             command =
             new SQLiteCommand("DROP TABLE IF EXISTS 'houses';", connection);
@@ -106,6 +108,7 @@ namespace Git_test
 
         private void bZapros_Click(object sender, EventArgs e)
         {
+            l_InfoSelect.Text = "";
             listBox1.Items.Clear();
             DateTime dt = DateTime.Now;
             connection.Open();
@@ -131,17 +134,24 @@ namespace Git_test
                 listBox1.Items.Add(result);
             }
             connection.Close();
-            label10.Text = "Готово";
+            l_InfoSelect.Text = "Готово";
             TimeSpan sp = DateTime.Now - dt;
-            label11.Text = sp.ToString();
+            lSelect.Text = sp.ToString();
         }
 
         
         private void bGeneration_Click(object sender, EventArgs e)
         {
+            lGener.Text = "";
+            l_InfoGener.Text = "";
             streets = Convert.ToInt32(tStreets.Text); //заданное колво улиц
             houses = Convert.ToInt32(tHouses.Text);  // заданное колво домов
+            randstreet.Clear();
+            DateTime dt = DateTime.Now;
             Generate();
+            TimeSpan sp = DateTime.Now - dt;
+            l_InfoGener.Text = "Готово";
+            lGener.Text = sp.ToString();
         }
         public void Generate()//создание и заполнение списков значениями для вставки в таблицы
         {
@@ -149,7 +159,7 @@ namespace Git_test
             floor.Clear();
             entrance.Clear();
             flat.Clear();
-            randstreet.Clear();
+            //randstreet.Clear();
             for (int i = 1; i <= streets; i++)
             {
                 name.Add("name" + i);
@@ -165,7 +175,23 @@ namespace Git_test
 
         private void bUpdate_Click(object sender, EventArgs e)
         {
+            l_InfoUpdate.Text = "";
             Generate();
+            DateTime dt = DateTime.Now;
+            connection.Open();
+            int id1;
+            for (int i = 0; i < houses; i++)//заполнение домов
+            {
+                id1 = i + 1;
+                string z = randstreet[i];
+                command =
+                new SQLiteCommand("UPDATE 'houses' SET 'name_street'='" + z + "', 'count_floor'='" + floor[i] + "', 'count_entrance'='" + entrance[i] + "', 'count_flat'='" + flat[i]+"' WHERE id='"+ id1 +"';", connection);
+                command.ExecuteNonQuery();
+            }
+            connection.Close();
+            l_InfoUpdate.Text = "Готово";
+            TimeSpan sp = DateTime.Now - dt;
+            lUpdate.Text = sp.ToString();
         }
     }
 }

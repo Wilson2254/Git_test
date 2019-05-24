@@ -45,13 +45,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.l_InfoZapoln = new System.Windows.Forms.Label();
+            this.l_InfoSelect = new System.Windows.Forms.Label();
+            this.lZapoln = new System.Windows.Forms.Label();
             this.bGeneration = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.l_InfoGener = new System.Windows.Forms.Label();
             this.bUpdate = new System.Windows.Forms.Button();
+            this.lUpdate = new System.Windows.Forms.Label();
+            this.lSelect = new System.Windows.Forms.Label();
+            this.l_InfoUpdate = new System.Windows.Forms.Label();
+            this.lGener = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bCreateBD
@@ -80,7 +84,7 @@
             // 
             this.bCreateT.BackColor = System.Drawing.Color.MistyRose;
             this.bCreateT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bCreateT.Location = new System.Drawing.Point(29, 92);
+            this.bCreateT.Location = new System.Drawing.Point(29, 98);
             this.bCreateT.Name = "bCreateT";
             this.bCreateT.Size = new System.Drawing.Size(109, 39);
             this.bCreateT.TabIndex = 3;
@@ -92,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(144, 105);
+            this.label2.Location = new System.Drawing.Point(144, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 5;
@@ -102,7 +106,7 @@
             // 
             this.bGetSP.BackColor = System.Drawing.Color.MistyRose;
             this.bGetSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bGetSP.Location = new System.Drawing.Point(29, 137);
+            this.bGetSP.Location = new System.Drawing.Point(29, 148);
             this.bGetSP.Name = "bGetSP";
             this.bGetSP.Size = new System.Drawing.Size(109, 39);
             this.bGetSP.TabIndex = 6;
@@ -114,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(144, 150);
+            this.label3.Location = new System.Drawing.Point(144, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 7;
@@ -124,7 +128,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(198, 150);
+            this.label4.Location = new System.Drawing.Point(198, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 8;
@@ -162,7 +166,7 @@
             // 
             this.bZapolnenie.BackColor = System.Drawing.Color.MistyRose;
             this.bZapolnenie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bZapolnenie.Location = new System.Drawing.Point(324, 147);
+            this.bZapolnenie.Location = new System.Drawing.Point(324, 152);
             this.bZapolnenie.Name = "bZapolnenie";
             this.bZapolnenie.Size = new System.Drawing.Size(109, 39);
             this.bZapolnenie.TabIndex = 12;
@@ -174,7 +178,7 @@
             // 
             this.bDeleteT.BackColor = System.Drawing.Color.MistyRose;
             this.bDeleteT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bDeleteT.Location = new System.Drawing.Point(29, 182);
+            this.bDeleteT.Location = new System.Drawing.Point(29, 200);
             this.bDeleteT.Name = "bDeleteT";
             this.bDeleteT.Size = new System.Drawing.Size(109, 39);
             this.bDeleteT.TabIndex = 14;
@@ -186,7 +190,7 @@
             // 
             this.bZapros.BackColor = System.Drawing.Color.MistyRose;
             this.bZapros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bZapros.Location = new System.Drawing.Point(324, 256);
+            this.bZapros.Location = new System.Drawing.Point(324, 253);
             this.bZapros.Name = "bZapros";
             this.bZapros.Size = new System.Drawing.Size(109, 39);
             this.bZapros.TabIndex = 15;
@@ -198,7 +202,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(144, 195);
+            this.label6.Location = new System.Drawing.Point(144, 213);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 7;
@@ -233,34 +237,34 @@
             this.listBox1.Size = new System.Drawing.Size(464, 160);
             this.listBox1.TabIndex = 16;
             // 
-            // label9
+            // l_InfoZapoln
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(439, 160);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Инфо";
+            this.l_InfoZapoln.AutoSize = true;
+            this.l_InfoZapoln.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.l_InfoZapoln.Location = new System.Drawing.Point(438, 152);
+            this.l_InfoZapoln.Name = "l_InfoZapoln";
+            this.l_InfoZapoln.Size = new System.Drawing.Size(35, 13);
+            this.l_InfoZapoln.TabIndex = 5;
+            this.l_InfoZapoln.Text = "Инфо";
             // 
-            // label10
+            // l_InfoSelect
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(434, 282);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Инфо";
+            this.l_InfoSelect.AutoSize = true;
+            this.l_InfoSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.l_InfoSelect.Location = new System.Drawing.Point(439, 253);
+            this.l_InfoSelect.Name = "l_InfoSelect";
+            this.l_InfoSelect.Size = new System.Drawing.Size(35, 13);
+            this.l_InfoSelect.TabIndex = 5;
+            this.l_InfoSelect.Text = "Инфо";
             // 
-            // label11
+            // lZapoln
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 224);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Таймер";
+            this.lZapoln.AutoSize = true;
+            this.lZapoln.Location = new System.Drawing.Point(438, 178);
+            this.lZapoln.Name = "lZapoln";
+            this.lZapoln.Size = new System.Drawing.Size(46, 13);
+            this.lZapoln.TabIndex = 17;
+            this.lZapoln.Text = "Таймер";
             // 
             // bGeneration
             // 
@@ -284,21 +288,21 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Создайте БД и Тбалицы";
             // 
-            // label13
+            // l_InfoGener
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(439, 115);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 13);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Инфо";
+            this.l_InfoGener.AutoSize = true;
+            this.l_InfoGener.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.l_InfoGener.Location = new System.Drawing.Point(439, 102);
+            this.l_InfoGener.Name = "l_InfoGener";
+            this.l_InfoGener.Size = new System.Drawing.Size(35, 13);
+            this.l_InfoGener.TabIndex = 20;
+            this.l_InfoGener.Text = "Инфо";
             // 
             // bUpdate
             // 
             this.bUpdate.BackColor = System.Drawing.Color.MistyRose;
             this.bUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bUpdate.Location = new System.Drawing.Point(324, 198);
+            this.bUpdate.Location = new System.Drawing.Point(324, 203);
             this.bUpdate.Name = "bUpdate";
             this.bUpdate.Size = new System.Drawing.Size(109, 39);
             this.bUpdate.TabIndex = 21;
@@ -306,17 +310,57 @@
             this.bUpdate.UseVisualStyleBackColor = false;
             this.bUpdate.Click += new System.EventHandler(this.bUpdate_Click);
             // 
+            // lUpdate
+            // 
+            this.lUpdate.AutoSize = true;
+            this.lUpdate.Location = new System.Drawing.Point(439, 229);
+            this.lUpdate.Name = "lUpdate";
+            this.lUpdate.Size = new System.Drawing.Size(46, 13);
+            this.lUpdate.TabIndex = 22;
+            this.lUpdate.Text = "Таймер";
+            // 
+            // lSelect
+            // 
+            this.lSelect.AutoSize = true;
+            this.lSelect.Location = new System.Drawing.Point(439, 279);
+            this.lSelect.Name = "lSelect";
+            this.lSelect.Size = new System.Drawing.Size(46, 13);
+            this.lSelect.TabIndex = 23;
+            this.lSelect.Text = "Таймер";
+            // 
+            // l_InfoUpdate
+            // 
+            this.l_InfoUpdate.AutoSize = true;
+            this.l_InfoUpdate.Location = new System.Drawing.Point(439, 203);
+            this.l_InfoUpdate.Name = "l_InfoUpdate";
+            this.l_InfoUpdate.Size = new System.Drawing.Size(35, 13);
+            this.l_InfoUpdate.TabIndex = 24;
+            this.l_InfoUpdate.Text = "Инфо";
+            // 
+            // lGener
+            // 
+            this.lGener.AutoSize = true;
+            this.lGener.Location = new System.Drawing.Point(439, 128);
+            this.lGener.Name = "lGener";
+            this.lGener.Size = new System.Drawing.Size(46, 13);
+            this.lGener.TabIndex = 25;
+            this.lGener.Text = "Таймер";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(530, 529);
+            this.ClientSize = new System.Drawing.Size(603, 529);
+            this.Controls.Add(this.lGener);
+            this.Controls.Add(this.l_InfoUpdate);
+            this.Controls.Add(this.lSelect);
+            this.Controls.Add(this.lUpdate);
             this.Controls.Add(this.bUpdate);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.l_InfoGener);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.bGeneration);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lZapoln);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bZapros);
             this.Controls.Add(this.bDeleteT);
@@ -328,8 +372,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bGetSP);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.l_InfoSelect);
+            this.Controls.Add(this.l_InfoZapoln);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
@@ -362,13 +406,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label l_InfoZapoln;
+        private System.Windows.Forms.Label l_InfoSelect;
+        private System.Windows.Forms.Label lZapoln;
         private System.Windows.Forms.Button bGeneration;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label l_InfoGener;
         private System.Windows.Forms.Button bUpdate;
+        private System.Windows.Forms.Label lUpdate;
+        private System.Windows.Forms.Label lSelect;
+        private System.Windows.Forms.Label l_InfoUpdate;
+        private System.Windows.Forms.Label lGener;
     }
 }
 
