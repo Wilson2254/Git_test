@@ -9,7 +9,7 @@ namespace Git_test
 {
     public partial class Form1 : Form
     {
-        const string databaseName = @"BD.db";
+        const string databaseName = @"BD.db"; //НАЗВАНИЕ БД
         SQLiteConnection connection;
         SQLiteCommand command;
         Random rnd = new Random();
@@ -27,15 +27,13 @@ namespace Git_test
             new SQLiteConnection(string.Format("Data Source={0};", databaseName));
         }
        
-        private void bCreateBD_Click(object sender, EventArgs e)
+        private void bCreateBD_Click(object sender, EventArgs e) //СОЗДАНИЕ БАЗЫ ДАННЫХ
         {
-
             SQLiteConnection.CreateFile(databaseName);
             label1.Text=(File.Exists(databaseName) ? "База данных создана" : "Возникла ошибка при создании базы данных");
-
         }
 
-        private void bCreateT_Click(object sender, EventArgs e)
+        private void bCreateT_Click(object sender, EventArgs e) //СОЗДАНИЕ ТАБЛИЦ
         {
             connection.Open();
 
@@ -53,7 +51,7 @@ namespace Git_test
             label2.Text = "Таблицы созданы";
         }
 
-        private void bGetSP_Click(object sender, EventArgs e)
+        private void bGetSP_Click(object sender, EventArgs e) //ПРОВЕРКА НА СУЩЕСТВОВАНИЕ ТАБЛИЦ
         {
             label4.Text = "";
             connection.Open();
@@ -64,7 +62,7 @@ namespace Git_test
             connection.Close();
         }
 
-        private void bZapolnenie_Click(object sender, EventArgs e)
+        private void bZapolnenie_Click(object sender, EventArgs e) //ЗАПОЛНЕНИЕ ТАБЛИЦ (INSERT)
         {
             l_InfoZapoln.Text = "";
             DateTime dt = DateTime.Now;
@@ -74,8 +72,6 @@ namespace Git_test
                 command =
             new SQLiteCommand("INSERT INTO 'streets' (name_street) VALUES ('"+name[i]+"');", connection);
                 command.ExecuteNonQuery();
-                //timer1.Enabled = false;
-                //label11.Text = a.ToString();
             }
             
             for (int i = 0; i < houses; i++)//заполнение домов
@@ -106,7 +102,7 @@ namespace Git_test
             label6.Text = "Таблицы удалены";
         }
 
-        private void bZapros_Click(object sender, EventArgs e)
+        private void bZapros_Click(object sender, EventArgs e) // ЗАПРОС СЛУЧАЙНО СГЕНЕРИРОВАВШЕЙСЯ УЛИЦЫ (ВЫВОДИМ НОМЕР ДОМА, НОМЕР УЛИЦЫ, ДАННЫЕ О ДОМЕ)
         {
             l_InfoSelect.Text = "";
             listBox1.Items.Clear();
@@ -140,7 +136,7 @@ namespace Git_test
         }
 
         
-        private void bGeneration_Click(object sender, EventArgs e)
+        private void bGeneration_Click(object sender, EventArgs e) //ГЕНЕРАЦИЯ ДЛЯ ГРУППЫ ЗАПРОСОВ
         {
             lGener.Text = "";
             l_InfoGener.Text = "";
@@ -173,7 +169,7 @@ namespace Git_test
             }
         }
 
-        private void bUpdate_Click(object sender, EventArgs e)
+        private void bUpdate_Click(object sender, EventArgs e) //ИЗМЕНЯЕМ ДАННЫЕ ДЛЯ КАЖДОГО ДОМА
         {
             l_InfoUpdate.Text = "";
             Generate();
